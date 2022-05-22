@@ -40,8 +40,9 @@ app.post("/", function(req, res){
      if(response.statusCode === 200){
        res.sendFile(__dirname + "/success.html");
      } else{
+       res.sendFile(__dirname + "/failure.html");
 
-     }res.sendFile(__dirname + "/failure.html");
+     }
      response.on("data", function(data){
        console.log(JSON.parse(data));
      });
@@ -60,8 +61,3 @@ app.post("/failure", function(req, res){
 app.listen(process.env.PORT || 3000, function(){
   console.log("Server is running at 3000");
 });
-
-// API KEY
-// 6e40b6c8d99edf1a75e6c3e3d86010c7-us10
-// audience id
-// 2e1fd9ab8d
