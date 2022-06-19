@@ -32,7 +32,7 @@ app.post("/", function(req, res){
 
    const options = {
      method: "POST",
-     auth: "rohit:6e40b6c8d99edf1a75e6c3e3d86010c7-us10"
+     auth: "rohit:**************************-us10"  //Mailchimp API Key
    }
 
    const request = https.request(url, options, function(response){
